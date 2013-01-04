@@ -1,0 +1,22 @@
+---
+blueprint:
+  name: Env Vars Demo
+  description: A very simple Sinatra app that shows how Cloud Foundry advertises its functionality thru the use of environment variables. Deploys two services: look for them in the VCAP_SERVICES variable.
+  imageURL: https://raw.github.com/ericbottard/env-vars-sinatra/master/logo.png
+applications:
+- name: env-vars-sinatra
+  framework: sinatra
+  runtime: ruby19
+  memory: 64M
+  instances: 1
+  url: env-vars-sinatra.${target-base}
+  path: .
+  services:
+    my-redis-service:
+      vendor: redis
+      version: '2.2'
+      tier: free
+    my-postgresql-service:
+      vendor: postgresql
+      version: '9.0'
+      tier: free
