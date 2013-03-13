@@ -1,10 +1,10 @@
----
 blueprint:
-  name: "Env Vars Demo"
-  description: "A very simple Sinatra app that shows how Cloud Foundry advertises its functionality thru the use of environment variables. Deploys two services: look for them in the VCAP_SERVICES variable."
+  name: Env Vars Demo
+  description: 'A very simple Sinatra app that shows how Cloud Foundry advertises
+    its functionality thru the use of environment variables. Deploys two services:
+    look for them in the VCAP_SERVICES variable.'
   imageURL: https://raw.github.com/cloudfoundry-blueprints/env-vars-sinatra/master/logo.png
   browseURL: https://github.com/cloudfoundry-blueprints/env-vars-sinatra
-  buildInstructions: ""
 applications:
 - name: env-vars-sinatra
   framework: sinatra
